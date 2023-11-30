@@ -5,7 +5,7 @@ import { Column, Entity, Long, ManyToOne, OneToMany, PrimaryGeneratedColumn } fr
 @Entity()
 export class UsuarioEntity {
   @PrimaryGeneratedColumn('uuid')
-  id: Long;
+  id: number;
 
   @Column()
   nombre: string;

@@ -5,7 +5,7 @@ import { Column, Entity, IntegerType, Long, ManyToOne, PrimaryGeneratedColumn } 
 @Entity()
 export class FotoEntity {
   @PrimaryGeneratedColumn('uuid')
-  id: Long ;
+  id: number;
 
   @Column()
   ISO: number;

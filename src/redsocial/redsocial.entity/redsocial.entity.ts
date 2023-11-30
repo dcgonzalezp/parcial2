@@ -4,7 +4,7 @@ import { Column, Entity, Long, OneToMany, PrimaryGeneratedColumn } from 'typeorm
 @Entity()
 export class RedsocialEntity {
   @PrimaryGeneratedColumn('uuid')
-  id: Long;
+  id: number;
 
   @Column()
   nombre: string;

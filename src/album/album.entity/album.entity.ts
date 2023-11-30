@@ -4,7 +4,7 @@ import { Column, Entity, JoinTable, Long, ManyToMany, OneToMany, PrimaryGenerate
 @Entity()
 export class AlbumEntity {
   @PrimaryGeneratedColumn('uuid')
-  id: Long;
+  id: number;
 
   @Column()
   fechaInicio: Date;
