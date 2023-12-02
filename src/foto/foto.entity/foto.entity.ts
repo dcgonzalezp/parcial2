@@ -1,10 +1,10 @@
-import { AlbumEntity } from 'src/album/album.entity/album.entity';
-import { UsuarioEntity } from 'src/usuario/usuario.entity/usuario.entity';
+import { AlbumEntity } from '../../album/album.entity/album.entity';
+import { UsuarioEntity } from '../../usuario/usuario.entity/usuario.entity';
 import { Column, Entity, IntegerType, Long, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class FotoEntity {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn('increment')
   id: number;
 
   @Column()

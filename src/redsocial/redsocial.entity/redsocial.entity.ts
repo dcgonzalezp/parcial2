@@ -1,9 +1,9 @@
-import { UsuarioEntity } from 'src/usuario/usuario.entity/usuario.entity';
+import { UsuarioEntity } from '../../usuario/usuario.entity/usuario.entity';
 import { Column, Entity, Long, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class RedsocialEntity {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn('increment')
   id: number;
 
   @Column()

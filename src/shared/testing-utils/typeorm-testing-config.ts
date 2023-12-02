@@ -1,8 +1,8 @@
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AlbumEntity } from 'src/album/album.entity/album.entity';
-import { FotoEntity } from 'src/foto/foto.entity/foto.entity';
-import { RedsocialEntity } from 'src/redsocial/redsocial.entity/redsocial.entity';
-import { UsuarioEntity } from 'src/usuario/usuario.entity/usuario.entity';
+import { AlbumEntity } from '../../album/album.entity/album.entity';
+import { FotoEntity } from '../../foto/foto.entity/foto.entity';
+import { RedsocialEntity } from '../../redsocial/redsocial.entity/redsocial.entity';
+import { UsuarioEntity } from '../../usuario/usuario.entity/usuario.entity';
 
 export const TypeOrmTestingConfig = () => [
   TypeOrmModule.forRoot({

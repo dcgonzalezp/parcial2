@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { AlbumEntity } from 'src/album/album.entity/album.entity';
-import { FotoEntity } from 'src/foto/foto.entity/foto.entity';
+import { AlbumEntity } from '../album/album.entity/album.entity';
+import { FotoEntity } from '../foto/foto.entity/foto.entity';
 import {
   BusinessError,
   BusinessLogicException,
-} from 'src/shared/errors/business-errors';
+} from '../shared/errors/business-errors';
 import { Long, Repository } from 'typeorm';
 
 @Injectable()
@@ -65,7 +65,7 @@ export class AlbumService {
 
     if (!foto)
       throw new BusinessLogicException(
-        'The track with the given id was not found',
+        'The foto with the given id was not found',
         BusinessError.NOT_FOUND,
       );
     if (!album)
