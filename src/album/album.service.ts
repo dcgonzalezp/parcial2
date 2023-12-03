@@ -16,7 +16,7 @@ export class AlbumService {
 
     @InjectRepository(FotoEntity)
     private readonly fotoRepository: Repository<FotoEntity>,
-  ) {}
+  ) { }
 
   async create(album: AlbumEntity): Promise<AlbumEntity> {
     if (!album.titulo)
@@ -73,10 +73,10 @@ export class AlbumService {
         'The album with the given id was not found',
         BusinessError.NOT_FOUND,
       );
-
     if (
-      foto.fecha.getDate() < album.fechaInicio.getDate() ||
-      foto.fecha.getDate() > album.fechaFin.getDate()
+      new Date(foto.fecha) < new Date(album.fechaInicio)
+      ||
+      new Date(foto.fecha) > new Date(album.fechaFin)
     ) {
       throw new BusinessLogicException(
         'The date must be in range',
